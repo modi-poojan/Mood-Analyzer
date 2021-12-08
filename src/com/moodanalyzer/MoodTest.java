@@ -8,13 +8,15 @@ public class MoodTest {
 
 	@Test
 	public void moodSad() {
-		MoodAnalyzer call = new MoodAnalyzer("I am sad");
+		MoodAnalyzer call = new MoodAnalyzer("I am in sad Mood ");
 		assertEquals("SAD", call.analyseMood());
 	}
 	
 	@Test
-	public void happySad() {
-		MoodAnalyzer call = new MoodAnalyzer("I am in any mood");
+	public void moodHappy() {
+		MoodAnalyzer call = new MoodAnalyzer("I am in happy mood");
 		assertEquals("HAPPY", call.analyseMood());
 	}
+	
+	
 }
