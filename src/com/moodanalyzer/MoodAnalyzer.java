@@ -12,17 +12,17 @@ public class MoodAnalyzer {
 		this.message = message;
 	}
 
-	public String analyseMood() {
+	public String analyseMood() throws MoodAnalysisException {
 
-		try {
-		if (this.message.contains("sad")) 
+		if (this.message == null) {
+			throw new MoodAnalysisException("Mood can't null", ExceptionTypes.NULL);
+		} else if (this.message.isEmpty()) {
+			throw new MoodAnalysisException("Mood can't be left empty", ExceptionTypes.EMPTY);
+		} else if (this.message.contains("sad")) {
 			return "SAD";
-		 else 
+		} else
 			return "HAPPY";
-		
-		}catch(NullPointerException obj){
-			return "HAPPY";
-		}
 	}
 }
+
 //
