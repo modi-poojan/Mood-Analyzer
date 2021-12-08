@@ -11,7 +11,10 @@ public class MoodMain {
 
 		System.out.println("Mood Analyzer\n");
 		
-		String output = call.analyseMood("I am in sad mood");
-		System.out.println("User's mood is "+ output);
+		//String sadMood = call.analyseMood("I am in sad mood");
+		//System.out.println("User's mood is "+ sadMood);
+		
+		String anyMood = call.analyseMood("I am in any mood ");
+		System.out.println("User's mood is "+ anyMood);
 	}
 }
