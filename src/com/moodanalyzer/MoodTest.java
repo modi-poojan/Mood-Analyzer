@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+
 public class MoodTest {
 
 	@Test
@@ -20,6 +21,12 @@ public class MoodTest {
 
 	@Test(expected = MoodAnalysisException.class)
 	public void moodNull() throws MoodAnalysisException {
+		MoodAnalyzer call = new MoodAnalyzer();
+		call.analyseMood();
+	}
+	
+	@Test(expected = MoodAnalysisException.class)
+	public void moodEmpty() throws MoodAnalysisException{
 		MoodAnalyzer call = new MoodAnalyzer();
 		call.analyseMood();
 	}
