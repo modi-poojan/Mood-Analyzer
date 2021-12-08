@@ -7,20 +7,15 @@ import org.junit.Test;
 public class MoodTest {
 
 	@Test
-	public void moodSad() {
+	public void moodSad() throws Exception {
 		MoodAnalyzer call = new MoodAnalyzer("I am in sad Mood ");
 		assertEquals("SAD", call.analyseMood());
 	}
-	
+
 	@Test
-	public void moodHappy() {
+	public void moodHappy() throws Exception {
 		MoodAnalyzer call = new MoodAnalyzer("I am in happy mood");
 		assertEquals("HAPPY", call.analyseMood());
 	}
-	
-	@Test
-	public void moodNull() {
-		MoodAnalyzer call = new MoodAnalyzer();
-		assertEquals("HAPPY", call.analyseMood());
-	}
+
 }
